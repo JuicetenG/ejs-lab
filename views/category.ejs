@@ -1,0 +1,24 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title><%= category %></title>
+</head>
+<body>
+  <%- include('./partials/nav.ejs'); %>
+  <h1><%= category %></h1>
+  <% items.forEach(item => { %>
+    <ul>
+      <li><b><%= item.name %></b>
+        <% if(item.rating === 5) { %>
+          <span>⭐</span>
+        <% } %>
+      </li>
+      <li><%= item.details %></li>
+      <li>Price: $<%= item.price.toFixed(2) %></li>
+      <li>Rating: <%= item.rating %></li>
+    </ul>
+  <% }); %>
+</body>
+</html>
