@@ -12,6 +12,14 @@ body {
   text-align: center;
 }
 
+nav {
+  margin: 10px;
+}
+
+h1 {
+  margin: 10px;
+}
+
 #menu-category {
   display: flex;
   flex-direction: column;
@@ -21,6 +29,10 @@ body {
 
 #menu-item {
   margin: 10px;
+}
+
+#menu-item li {
+  margin: 2px;  
 }
 
 li {
