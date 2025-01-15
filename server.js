@@ -1,6 +1,7 @@
 const express = require('express');
 const app = express();
 
+app.use(express.static('public'));
 
 const RESTAURANT = {
   name: 'The Green Byte Bistro',

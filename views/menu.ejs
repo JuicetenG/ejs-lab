@@ -1,54 +1,65 @@
-<!DOCTYPE html>
-<html lang="en">
-<head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+<%- include('./partials/html-head') %>
   <title>Menu</title>
 </head>
 <body>
   <%- include('./partials/nav.ejs'); %>
   <h1>Full Menu</h1>
 
-  <h3>Mains</h3>
-  <% mains.forEach((item) => { %>
-    <ul>
-      <li><b><%= item.name %></b>
-        <% if(item.rating === 5) { %>
-          <span>⭐</span>
-        <% } %>
-      </li>
-      <li><%= item.details %></li>
-      <li>Price: $<%= item.price.toFixed(2) %></li>
-      <li>Rating: <%= item.rating %></li>
-    </ul>
-  <% }); %>
+  <div id="menu-category">
+    <h2>Mains</h2>
+    <% mains.forEach((item) => { %>
+      <ul>
+        <div id="menu-item">
+          <li><b><%= item.name %></b>
+            <% if(item.rating === 5) { %>
+              <span>⭐</span>
+            <% } %>
+          </li>
+          <li><%= item.details %></li>
+          <li>Price: $<%= item.price.toFixed(2) %></li>
+          <li>Rating: <%= item.rating %></li>
+        </div>
+      </ul>
+    <% }); %>
+    </div>
+  </div>
 
-  <h3>Sides</h3>
-  <% sides.forEach((item) => { %>
-    <ul>
-      <li><b><%= item.name %></b>
-        <% if(item.rating === 5) { %>
-          <span>⭐</span>
-        <% } %>
-      </li>
-      <li><%= item.details %></li>
-      <li>Price: $<%= item.price.toFixed(2) %></li>
-      <li>Rating: <%= item.rating %></li>
-    </ul>
-  <% }); %>
 
-  <h3>Desserts</h3>
-  <% desserts.forEach((item) => { %>
-    <ul>
-      <li><b><%= item.name %></b>
-        <% if(item.rating === 5) { %>
-          <span>⭐</span>
-        <% } %>
-      </li>
-      <li><%= item.details %></li>
-      <li>Price: $<%= item.price.toFixed(2) %></li>
-      <li>Rating: <%= item.rating %></li>
-    </ul>
-  <% }); %>
+  <div id="menu-category">
+    <h2>Sides</h2>
+    <% sides.forEach((item) => { %>
+      <ul>
+        <div id="menu-item">
+          <li><b><%= item.name %></b>
+            <% if(item.rating === 5) { %>
+              <span>⭐</span>
+            <% } %>
+          </li>
+          <li><%= item.details %></li>
+          <li>Price: $<%= item.price.toFixed(2) %></li>
+          <li>Rating: <%= item.rating %></li>
+        </div>
+      </ul>
+    <% }); %>
+  </div>
+
+  <div id="menu-category">
+    <h2>Desserts</h2>
+    <% desserts.forEach((item) => { %>
+      <ul>
+        <div id="menu-item">
+          <li><b><%= item.name %></b>
+            <% if(item.rating === 5) { %>
+              <span>⭐</span>
+            <% } %>
+          </li>
+          <li><%= item.details %></li>
+          <li>Price: $<%= item.price.toFixed(2) %></li>
+          <li>Rating: <%= item.rating %></li>
+        </div>
+      </ul>
+    <% }); %>
+  </div>
+  </div>
 </body>
 </html>
